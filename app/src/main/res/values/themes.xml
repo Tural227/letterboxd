@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MovieApp" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">#E9A6A6</item>
+        <item name="android:statusBarColor">
+            #1F1D36
+        </item>
+    </style>
+
+    <style name="Theme.MovieApp" parent="Base.Theme.MovieApp" />
+
+
+</resources>

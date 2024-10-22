@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#1F1D36"
+    tools:context=".presentation.fragments.reviewspage_fragment.ReviewsPageFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/text_input_bg"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/posterImageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/textView34">
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            app:srcCompat="@drawable/calendar" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans_regular"
+            android:paddingLeft="8dp"
+            android:text="00 November 0000"
+            android:textAlignment="center"
+            android:textColor="#80FFFFFF"
+            android:textSize="11sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#3D3B54"
+            android:fontFamily="@font/open_sans_semibold"
+            android:maxHeight="40dp"
+            android:minHeight="30dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="Change"
+            android:textColor="#E9A6A6"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backwardButton"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#1F1D36"
+        android:maxHeight="37dp"
+
+        android:minHeight="15dp"
+        android:padding="4dp"
+        app:iconTint="@color/white"
+        app:icon="@drawable/backwardthesecond"
+        app:iconSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Write your review"
+        android:textColor="#80FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/backwardButton"
+        app:layout_constraintStart_toEndOf="@id/backwardButton"
+        app:layout_constraintTop_toTopOf="@id/backwardButton" />
+
+    <TextView
+        android:id="@+id/moiveNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="MovieName"
+        android:textColor="#80FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/backwardButton"
+        app:layout_constraintTop_toBottomOf="@+id/backwardButton" />
+
+
+    <TextView
+        android:id="@+id/yearTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="year"
+        android:textColor="#80FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/moiveNameTextView"
+        app:layout_constraintStart_toEndOf="@+id/moiveNameTextView" />
+
+    <ImageView
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:id="@+id/posterImageView"
+        android:layout_width="120dp"
+        android:layout_height="165dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/moiveNameTextView" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="Sepicfy the date you have wathced..."
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moiveNameTextView" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="Give your rating"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/scaleRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/textView36"
+        app:layout_constraintTop_toBottomOf="@+id/textView36"
+        app:srb_drawableEmpty="@drawable/vectorstarempty"
+        app:srb_drawableFilled="@drawable/vectorstarfilled"
+        app:srb_isIndicator="false"
+        app:srb_numStars="5"
+        app:srb_stepSize="0.5"
+        app:srb_starPadding="2dp" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tag="notFavourite"
+        app:layout_constraintBottom_toBottomOf="@+id/scaleRatingBar"
+        app:layout_constraintEnd_toStartOf="@+id/posterImageView"
+        app:layout_constraintTop_toTopOf="@+id/scaleRatingBar"
+        app:srcCompat="@drawable/savelike" />
+
+    <Button
+        android:id="@+id/publishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#E9A6A6"
+        android:fontFamily="@font/open_sans_semibold"
+        android:includeFontPadding="true"
+        android:paddingStart="30dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="4dp"
+        android:text="Publish"
+        android:textColor="#1F1D36"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#3D3B54"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/posterImageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#3D3B54"
+                android:ems="10"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="start|top"
+                android:hint="Write your review..."
+                android:inputType="textMultiLine"
+                android:textColor="#80FFFFFF"
+                android:textColorHint="#80FFFFFF"
+                android:textCursorDrawable="@drawable/cursor"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

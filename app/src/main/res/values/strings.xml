@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+
+    <string name="goofyString"><font color="#E9A6A6">Don’t have an account? Please </font><font color="#9C4A8B">Sign Up</font><font color="#E9A6A6"> first.</font>
+
+    </string>
+
+    <string name="signUp"><font color="#E9A6A6">Already have an account? Go to the </font><font color="#9C4A8B">Login page</font><font color="#E9A6A6">.</font></string>
+
+    <string name="salam"><font color="#9C4A8B">Read more</font></string>
+    <string name="sagol"><font color="#9C4A8B">Read less</font></string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="home">Home</string>
+
+
+</resources>

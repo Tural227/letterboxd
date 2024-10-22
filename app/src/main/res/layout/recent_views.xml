@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/testing"
+        app:cardBackgroundColor="#0DE9A6A6"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText,MissingClass">
+
+            <ImageView
+                android:id="@+id/ppImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/circle"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:translationZ="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pp" />
+
+            <TextView
+                android:id="@+id/movieNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Movie name"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                app:layout_constraintStart_toEndOf="@+id/ppImageView"
+                app:layout_constraintTop_toTopOf="@+id/ppImageView" />
+
+            <TextView
+                android:id="@+id/yearTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="year"
+                android:textColor="#80FFFFFF"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/movieNameTextView"
+                app:layout_constraintStart_toEndOf="@+id/movieNameTextView" />
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Review by user"
+                android:textColor="#80FFFFFF"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="@+id/movieNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/movieNameTextView" />
+
+
+            <TextView
+
+                android:id="@+id/reviewTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                android:textColor="#80FFFFFF"
+                android:textSize="10sp"
+                app:fontFamily="@font/open_sans_regular"
+                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                app:layout_constraintStart_toStartOf="@+id/usernameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
+
+            <TextView
+                android:id="@+id/expandTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Read more >"
+                android:textColor="#9C4A8B"
+                android:textSize="9sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/reviewTextView"
+                app:layout_constraintTop_toBottomOf="@+id/reviewTextView" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="85dp"
+                android:layout_height="110dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/rectangle" />
+
+            <RatingBar
+                android:id="@+id/ratingBar3"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+
+                android:isIndicator="true"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginStart="-12dp"
+                android:numStars="5"
+                android:progressBackgroundTint="#00000000"
+
+                android:progressTint="#EC2626"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:stepSize="0.5"
+                app:layout_constraintBottom_toBottomOf="@+id/usernameTextView"
+                app:layout_constraintStart_toEndOf="@+id/usernameTextView"
+                app:layout_constraintTop_toTopOf="@+id/usernameTextView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/moiveImageView"
+        android:layout_width="85dp"
+        android:layout_height="110dp"
+        android:background="@drawable/rectangle"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

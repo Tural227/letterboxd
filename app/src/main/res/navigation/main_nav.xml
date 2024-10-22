@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.movieapp.presentation.fragments.login_fragment.LoginFragment"
+        android:label="log_in"
+        tools:layout="@layout/log_in" >
+        <action
+            android:id="@+id/action_loginFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_recoveryFragment"
+            app:destination="@id/recoveryFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.movieapp.presentation.fragments.signup_fragment.SignUpFragment"
+        android:label="sign_up"
+        tools:layout="@layout/sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.movieapp.presentation.fragments.getstarted_fragment.StartFragment"
+        android:label="get_started"
+        tools:layout="@layout/get_started" >
+        <action
+            android:id="@+id/action_startFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/recoveryFragment"
+        android:name="com.example.movieapp.presentation.fragments.recovery_fragment.RecoveryFragment"
+        android:label="recovery_fragment"
+        tools:layout="@layout/recovery_fragment" >
+        <action
+            android:id="@+id/action_recoveryFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+</navigation>

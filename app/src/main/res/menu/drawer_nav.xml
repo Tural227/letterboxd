@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view"
+    >
+
+
+
+
+    <group>
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/iconrev"
+            android:title="Reviews"/>
+
+        <item android:id="@+id/nav_watchlist"
+            android:icon="@drawable/watchlist"
+            android:title="Watchlist"/>
+
+        <item android:id="@+id/nav_list"
+            android:icon="@drawable/list"
+            android:title="Lists"/>
+
+        <item android:id="@+id/nav_likes"
+            android:icon="@drawable/bi_heart"
+            android:title="Likes"/>
+
+
+    </group>
+    <item
+        android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Logout"/>
+        </menu>
+
+    </item>
+
+</menu>

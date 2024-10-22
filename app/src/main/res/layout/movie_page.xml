@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#1F1D36"
+    tools:context=".presentation.fragments.moviepage_fragment.MoviePageFragment">
+
+
+
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1D36"
+    >
+
+
+    <com.example.movieapp.presentation.components.CustomView
+        android:id="@+id/backPosterImageView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/posterImageView"
+        android:layout_width="120dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="-80dp"
+        android:background="@drawable/rectangle"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backPosterImageView" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView20"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/posterImageView"
+        app:layout_constraintTop_toBottomOf="@+id/posterImageView"
+        app:srcCompat="@drawable/eyeball" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintEnd_toStartOf="@+id/imageView23"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:srcCompat="@drawable/pageheart" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+        app:layout_constraintEnd_toEndOf="@+id/posterImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView20"
+        app:srcCompat="@drawable/pagelist" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/rateOrReviewButton"
+
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+        android:backgroundTint="#E9A6A6"
+        android:drawableLeft="@drawable/buttonone"
+        android:drawableTint="#1F1D36"
+        android:fontFamily="@font/open_sans_semibold"
+        android:minWidth="50dp"
+        android:minHeight="36dp"
+        android:paddingStart="12dp"
+        android:paddingRight="12dp"
+        android:text="Rate or Review"
+        android:textColor="#1F1D36"
+        android:textColorLink="#000000"
+        android:textSize="10sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/posterImageView"
+        app:layout_constraintStart_toStartOf="@+id/posterImageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20"
+        app:strokeColor="@color/white" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9A6A6"
+        android:drawableLeft="@drawable/buttontwo"
+        android:fontFamily="@font/open_sans_semibold"
+        android:minWidth="50dp"
+        android:minHeight="36dp"
+        android:paddingStart="15dp"
+        android:paddingRight="10dp"
+        android:tag="notChecked"
+        android:text="Add to Lists"
+        android:textColor="#1F1D36"
+        android:textSize="10sp"
+        app:cornerRadius="10dp"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/rateOrReviewButton"
+        app:layout_constraintStart_toStartOf="@+id/rateOrReviewButton"
+        app:layout_constraintTop_toBottomOf="@+id/rateOrReviewButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddWatchlist"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9A6A6"
+        android:drawableLeft="@drawable/buttonthree"
+
+        android:drawableTint="#1F1D36"
+        android:fontFamily="@font/open_sans_semibold"
+        android:minWidth="50dp"
+        android:minHeight="36dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:tag="notChecked"
+        android:text="Add to Watchlist"
+        android:textColor="#1F1D36"
+        android:textSize="10sp"
+        app:cornerRadius="10dp"
+        app:iconPadding="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAddList"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddList"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddList" />
+
+    <TextView
+        android:id="@+id/movieNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="MovieName"
+        android:textColor="#80FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/posterImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/posterImageView"
+        app:layout_constraintTop_toTopOf="@+id/posterImageView" />
+
+    <TextView
+        android:id="@+id/contentTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:justificationMode="inter_word"
+        android:lineSpacingExtra="1.5dp"
+        android:maxLines="6"
+        android:text="When Karate champion Michael Rivers wins the last tournament of his career, shady businessman Ron Hall offers him the opportunity to fight in an illegal Kumite in Bulgaria against the world’s best martial artists.  When Michael declines, Hall has his daug"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/movieNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/movieNameTextView" />
+
+    <TextView
+        android:id="@+id/directorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Directed by Author"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/contentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/contentTextView" />
+
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Ratings"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/directorTextView"
+        app:layout_constraintTop_toBottomOf="@+id/directorTextView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33">
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textColor="#E9A6A6"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar5"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:progressBackgroundTint="#00000000"
+            android:progressTint="#EC2626"
+
+
+            android:rating="2.5"
+
+
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="#30FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="All Reviews"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewsRV"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="4dp"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view7"
+        tools:listitem="@layout/movie_page_review" />
+
+
+    <com.example.movieapp.presentation.components.CustomRating
+        android:id="@+id/customRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <com.google.android.material.tabs.TabLayout
+
+        android:id="@+id/tabLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/tab_layout_indicator"
+        android:backgroundTint="#00000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:tabIndicator="@drawable/tab_layout_indicator"
+        app:tabIndicatorColor="#9C4A8B"
+        app:tabIndicatorFullWidth="true"
+
+        app:tabIndicatorGravity="center"
+        app:tabMode="scrollable"
+        app:tabPaddingBottom="6dp"
+        app:tabPaddingEnd="16dp"
+        app:tabPaddingStart="16dp"
+        app:tabPaddingTop="0dp"
+        app:tabRippleColor="#00FFFFFF"
+        app:tabSelectedTextColor="#80FFFFFF"
+        app:tabTextAppearance="@style/MyTabTextAppearence"
+        app:tabTextColor="#80FFFFFF">
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Casts" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crew" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="492dp" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#80FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/customRating"
+        app:layout_constraintEnd_toStartOf="@+id/customRating"
+        app:layout_constraintStart_toEndOf="@+id/imageView22" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/star_full"
+        app:layout_constraintBottom_toBottomOf="@+id/view8"
+        app:layout_constraintStart_toEndOf="@+id/buttonAddWatchlist" />
+
+    <TextView
+        android:id="@+id/runtimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="0 mins"
+        android:textColor="#80FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backPosterImageView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/noReviewTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/empty_text_bg"
+        android:gravity="center"
+        android:text="No Reviews!"
+        android:textColor="#80FFFFFF"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detailsCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="#1F1D36"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Production Companies"
+                    android:textColor="#D9FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/textView22"
+                    app:layout_constraintTop_toBottomOf="@+id/genreTextView" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Budget"
+                    android:textColor="#D9FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/revenueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="TextView"
+                    android:textColor="#B3FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/textView41"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Revenue"
+                    android:textColor="#D9FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/textView41"
+                    app:layout_constraintTop_toBottomOf="@+id/revenueTextView" />
+
+                <TextView
+                    android:id="@+id/countriesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="TextView"
+                    android:textColor="#B3FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/companiesTextVeiw"
+                    app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+                <TextView
+                    android:id="@+id/budgetTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="TextView"
+                    android:textColor="#B3FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/revenueTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Genres"
+                    android:textColor="#D9FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/textView38"
+                    app:layout_constraintTop_toBottomOf="@+id/budgetTextView" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Countries"
+                    android:textColor="#D9FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/textView31"
+                    app:layout_constraintTop_toBottomOf="@+id/companiesTextVeiw" />
+
+                <TextView
+                    android:id="@+id/companiesTextVeiw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="TextView"
+                    android:textColor="#B3FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/genreTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                <TextView
+                    android:id="@+id/genreTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="TextView"
+                    android:textColor="#B3FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/budgetTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/crewRV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/credits_profile" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/castRV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/credits_profile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backwardButton"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#1F1D36"
+        android:maxHeight="37dp"
+
+        android:minHeight="15dp"
+        android:padding="8dp"
+
+        app:icon="@drawable/backward"
+        app:iconTint="@color/white"
+
+        app:iconSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+

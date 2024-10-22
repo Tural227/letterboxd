@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:id="@+id/firstImageView"
+        android:layout_width="85dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/rectangle"
+        android:elevation="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:id="@+id/fourthImageView"
+        android:layout_width="85dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/thirdImageView"
+        app:layout_constraintStart_toStartOf="@+id/thirdImageView"
+        app:layout_constraintTop_toTopOf="@+id/thirdImageView"
+        />
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:id="@+id/thirdImageView"
+        android:layout_width="85dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/secondImageView"
+        app:layout_constraintStart_toStartOf="@+id/secondImageView"
+        app:layout_constraintTop_toTopOf="@+id/secondImageView"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:id="@+id/secondImageView"
+        android:layout_width="85dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/firstImageView"
+        app:layout_constraintStart_toStartOf="@+id/firstImageView"
+        app:layout_constraintTop_toTopOf="@+id/firstImageView"
+        />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/open_sans_semibold"
+        android:maxLines="1"
+        android:scaleType="centerCrop"
+        android:text="TextView"
+        android:textColor="#E9A6A6"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/firstImageView"
+        app:layout_constraintTop_toBottomOf="@+id/secondImageView" />
+
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="4dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/circle"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+         />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/open_sans_semibold"
+        android:maxLines="1"
+        android:text="Name"
+        android:textColor="#E9A6A6"
+        android:textSize="6sp"
+        app:layout_constraintBottom_toBottomOf="@+id/userImageView"
+        app:layout_constraintStart_toEndOf="@+id/userImageView"
+        app:layout_constraintTop_toTopOf="@+id/userImageView" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+        app:layout_constraintStart_toEndOf="@+id/nameTextView"
+        app:layout_constraintTop_toTopOf="@+id/nameTextView"
+        app:srcCompat="@drawable/heart" />
+
+    <TextView
+        android:id="@+id/likeCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="0"
+        android:textColor="#80FFFFFF"
+        android:textSize="6sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintTop_toTopOf="@+id/imageView17" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/likeCountTextView"
+        app:layout_constraintStart_toEndOf="@+id/likeCountTextView"
+        app:layout_constraintTop_toTopOf="@+id/likeCountTextView"
+        app:srcCompat="@drawable/message" />
+
+    <TextView
+        android:id="@+id/commentCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="0"
+        android:textColor="#80FFFFFF"
+        android:textSize="6sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
